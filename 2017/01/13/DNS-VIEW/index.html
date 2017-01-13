@@ -84,15 +84,19 @@
 
 
 
-<meta name="description" content="redhat">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Carolljy's Blog">
-<meta property="og:url" content="http://carolljy.github.io/index.html">
+<meta name="description" content="DNS-VIEW1.DNS系统简介DNS系统是个多级别的、分布的数据库系统。它保存互连网主机名和IP地址的对应关系，也保存IP地址和主机名的对应关系，邮件路由信息,和其他一些互连网程式用到的信息。
+DNS中客户程序查找的信息叫解析库（resolver library)，他发送一个查询到一个或多个服务器并等待回应，BIND 9包含了域名服务和解析库。DNS中的数据是按树型结构存储的，或者说是按树型管">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dns-view">
+<meta property="og:url" content="http://carolljy.github.io/2017/01/13/DNS-VIEW/index.html">
 <meta property="og:site_name" content="Carolljy's Blog">
-<meta property="og:description" content="redhat">
+<meta property="og:description" content="DNS-VIEW1.DNS系统简介DNS系统是个多级别的、分布的数据库系统。它保存互连网主机名和IP地址的对应关系，也保存IP地址和主机名的对应关系，邮件路由信息,和其他一些互连网程式用到的信息。
+DNS中客户程序查找的信息叫解析库（resolver library)，他发送一个查询到一个或多个服务器并等待回应，BIND 9包含了域名服务和解析库。DNS中的数据是按树型结构存储的，或者说是按树型管">
+<meta property="og:updated_time" content="2017-01-13T07:54:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Carolljy's Blog">
-<meta name="twitter:description" content="redhat">
+<meta name="twitter:title" content="dns-view">
+<meta name="twitter:description" content="DNS-VIEW1.DNS系统简介DNS系统是个多级别的、分布的数据库系统。它保存互连网主机名和IP地址的对应关系，也保存IP地址和主机名的对应关系，邮件路由信息,和其他一些互连网程式用到的信息。
+DNS中客户程序查找的信息叫解析库（resolver library)，他发送一个查询到一个或多个服务器并等待回应，BIND 9包含了域名服务和解析库。DNS中的数据是按树型结构存储的，或者说是按树型管">
 
 
 
@@ -120,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://carolljy.github.io/"/>
+  <link rel="canonical" href="http://carolljy.github.io/2017/01/13/DNS-VIEW/"/>
 
 
 
 
 
-  <title> Carolljy's Blog </title>
+  <title> dns-view | Carolljy's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -147,9 +151,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -228,9 +230,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -263,10 +265,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/01/13/DNS-VIEW/" itemprop="url">
-                  dns-view
-                </a>
+                dns-view
               
             
           </h1>
@@ -315,9 +314,7 @@
       
 
       
-        
-          
-            <h1 id="DNS-VIEW"><a href="#DNS-VIEW" class="headerlink" title="DNS-VIEW"></a>DNS-VIEW</h1><h3 id="1-DNS系统简介"><a href="#1-DNS系统简介" class="headerlink" title="1.DNS系统简介"></a>1.DNS系统简介</h3><p>DNS系统是个多级别的、分布的数据库系统。它保存互连网主机名和IP地址的对应关系，也保存IP地址和主机名的对应关系，邮件路由信息,和其他一些互连网程式用到的信息。</p>
+        <h1 id="DNS-VIEW"><a href="#DNS-VIEW" class="headerlink" title="DNS-VIEW"></a>DNS-VIEW</h1><h3 id="1-DNS系统简介"><a href="#1-DNS系统简介" class="headerlink" title="1.DNS系统简介"></a>1.DNS系统简介</h3><p>DNS系统是个多级别的、分布的数据库系统。它保存互连网主机名和IP地址的对应关系，也保存IP地址和主机名的对应关系，邮件路由信息,和其他一些互连网程式用到的信息。</p>
 <p>DNS中客户程序查找的信息叫解析库（resolver library)，他发送一个查询到一个或多个服务器并等待回应，BIND 9包含了域名服务和解析库。DNS中的数据是按树型结构存储的，或者说是按树型管理的。树的每个节点，称为一个域，由一个库文件标示。表示节点的域名相互串联直到根域（root node）。他从右到左写成字符串，中间用“点”（.）分隔。一个域名只需要在他的父域中名字唯一就可以了。</p>
 <p>例如在Uplooking公司中 一个主机的名字是mail.uplooking.com,这里com 是最高级的域名，mail.uplooking.com 属于这个域，uplooking是com的的子域，mail 是主机的名字。</p>
 <p>为了管理方便，名址空间被分隔成一些区，这些区叫做区域（zones）。每一个从一个节点开始，并且延伸至一个叶子节点，或延伸到另一个区域的开始。每一个区域的数据都存在DNS中，他通过DNS协议应答本区域的DNS查询。相关的域名数据存储在资源记录中（resource records (RRs)）。正确的操作域名服务器，很重要的一点是理解区域（zones）和域（domain）的区别。</p>
@@ -411,16 +408,20 @@
 <p>在serverj上，我们可以在/var/named/slaves目录下找到相应的数据文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@serverj slaves]# ls</div><div class="line">dx.abc.com.zone  other.abc.com.zone  wt.abc.com.zone</div><div class="line">[root@serverj slaves]# pwd</div><div class="line">/var/named/slaves</div></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -429,164 +430,34 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://carolljy.github.io/2017/01/13/HTTP协议简述/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Li Jiayi">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/mypicture/1.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Carolljy's Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Carolljy's Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/01/13/HTTP协议简述/" rel="next" title="HTTP协议简述">
+                <i class="fa fa-chevron-left"></i> HTTP协议简述
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2017/01/13/HTTP协议简述/" itemprop="url">
-                  HTTP协议简述
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-13T15:44:49+08:00">
-                2017-01-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>HTTP协议</p>
-<p>http协议是基于TCP/IP协议的应用层协议，主要规定了客户端和服务器之间的通信格式，默认使用80端口。</p>
-<p>最早版本1991年的0.9版本。</p>
-<p>协议规定，只能回应HTML格式的字符串，不能回应别的格式。</p>
-<p>服务器发送完毕，就关闭TCP连接</p>
-<p>HTTP/1.0  1996年5月</p>
-<p>任何格式的内容都可以发送，不仅限于字符串，还能传输图像、视频、二进制文件。</p>
-<p>丰富了浏览器和服务器的互动手段。</p>
-<p>新增的功能包括状态码，权限，缓存，内容编码等等。</p>
-<p> 缺点：每个TCP连接只能发送一次请求，数据发送完毕，连接就关闭，如果还要请求其他资源，就必须再建立一个连接。</p>
-<p>TCP连接的新建成本很高，需要三次握手，性能较差。</p>
-<p>HTTP/1.1  1997年1月</p>
-<p>进一步完善了HTTP，一直用到了20年后的今天。</p>
-<p>1）引入了持久连接，采用了keep-alive的方式，保持连接，要求服务器不要关闭TCP连接，其他请求可以复用这个连接。</p>
-<p>客户端和服务器发现对方一段时间没有活动，就可以主动关闭连接。目前情况下，对于同一个域名，大多数浏览器允许同时建立6个持久连接。</p>
-<p>2）管道机制：在同一个TCP链接里面，客户端可以同时发送多个请求。</p>
-<p>客户端需要请求两个资源，以前的做法是在同一个TCP连接里面，先发送A请求，等待服务器作出回应，收到后再发出B请求。管道机制则允许浏览器同时发出A和B请求，但是服务器还是按照顺序，先回应A请求，完成后再回应B请求。</p>
-<p>3）缺点：队头堵塞，虽然允许TCP复用连接，但是服务器一次只能处理一个回应，导致请求依旧排队等着。</p>
-<p>为了避免这个问题，两个方法</p>
-<p>1.减少请求数</p>
-<p>2.同时多开持久连接。</p>
-<p>2009年SPDY   google开发的协议，用以解决以上问题，变成HTTP/2的基础。</p>
-<p>HTTP/2 2015年发布</p>
-<p>优势</p>
-<p>1.多路复用，也可以称为多工    在同一个TCP连接里面，同时收到了A请求和B请求，不用按照顺序一一回应。</p>
-<p>2.优先级  http/2将每个请求回应的数据包称为数据流，每个数据流都有对应的一个优先级，优先级越高，服务器越早回应。</p>
-<p>3.头信息压缩，HTTP协议不带有状态，每次请求都必须附上所有的信息，浪费带宽，影响速度。采用压缩后发送，减少传输时候占用的带宽。</p>
-<p>4.服务器推送。HTTP/2允许服务器未经请求，主动向客户端发送资源。</p>
-<p>场景：客户端收到网页后，解析HTML源码，发现有静态资源，再发出静态资源请求，其实服务器可以预期到客户端请求网页后，还会请求静态资源，所以就把这些资源随着网页一起发送给客户端了。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -594,6 +465,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -613,8 +488,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/mypicture/1.jpg"
@@ -653,6 +537,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DNS-VIEW"><span class="nav-number">1.</span> <span class="nav-text">DNS-VIEW</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-DNS系统简介"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.DNS系统简介</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-bind软件简介"><span class="nav-number">1.1.</span> <span class="nav-text">2.bind软件简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-bind9的view视图"><span class="nav-number">1.2.</span> <span class="nav-text">3.bind9的view视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-ACL参数的配置"><span class="nav-number">1.3.</span> <span class="nav-text">4.ACL参数的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-基于dns-view的主辅同步"><span class="nav-number">1.4.</span> <span class="nav-text">5.基于dns-view的主辅同步</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -758,6 +658,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
